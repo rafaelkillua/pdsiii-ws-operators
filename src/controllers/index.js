@@ -3,7 +3,7 @@ module.exports = {
     return res.status(200).json({ status: 'Serviço disponível WS1' })
   },
   
-  pay: (req, res) => {
+  pay: async (req, res) => {
     const regras = require('../resources/constants.json')
     const { operadora } = req.params
     const dadosOperadora = regras[operadora]

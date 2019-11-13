@@ -5,7 +5,7 @@ const cors = require('cors')
 require('dotenv').config()
 const port = process.env.PORT || 80
 
-const indexRouter = require('./routes/index')
+const operatorsRouter = require('./routes/ws-operators')
 
 const app = express()
 
@@ -15,7 +15,7 @@ app.use(logger('dev'))
 app.use(cors())
 app.use(cookieParser())
 
-indexRouter(app)
+operatorsRouter(app)
 
 app.use('/docs', express.static('doc'))
 
