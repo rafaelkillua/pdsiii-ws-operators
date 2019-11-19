@@ -7,6 +7,7 @@ const port = process.env.PORT || 80
 
 const operatorsRouter = require('./routes/ws-operators')
 const brandsRouter = require('./routes/ws-brands')
+const banksRouter = require('./routes/ws-banks')
 
 const app = express()
 
@@ -18,6 +19,7 @@ app.use(cookieParser())
 
 operatorsRouter(app)
 brandsRouter(app)
+banksRouter(app)
 
 app.use('/docs', express.static('doc'))
 
