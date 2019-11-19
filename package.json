@@ -20,7 +20,8 @@
     "name": "WS-Operators",
     "version": "0.0.1",
     "title": "WS Operator",
-    "description": "A API do operador intermediará a comunicação entre o vendedor e a bandeira do cartão de crédito."
+    "description": "A API do operador intermediará a comunicação entre o vendedor e a bandeira do cartão de crédito.",
+    "url": "http://localhost"
   },
   "devDependencies": {
     "apidoc": "^0.17.7",
