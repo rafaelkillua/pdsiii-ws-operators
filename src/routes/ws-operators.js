@@ -1,9 +1,11 @@
-const indexController = require('../controllers/index')
+const operatorsController = require('../controllers/ws-operators')
+
+const baseURL = '/ws-operators/v1/'
 
 module.exports = app => {
 
   /** 
-   * @api {GET} /ws-operators/v1/status Status da API
+   * @api {GET} /ws-operators/v1/status Operators - Status da API
    * @apiVersion 0.0.1
    * @apiDescription Verifica a disponibilidade da API
    * @apiGroup Recursos Abertos
@@ -16,10 +18,10 @@ module.exports = app => {
    * }
    *  
   */
-  app.get('/ws-operators/v1/status', indexController.status)
+  app.get(`${baseURL}status`, operatorsController.status)
 
   /**
-   * @api {POST} /ws-operators/v1/pay/:operadora Executa o pagamento via cartão de crédito
+   * @api {POST} /ws-operators/v1/pay/:operadora Operators - Executa o pagamento via cartão de crédito
    * @apiVersion 0.0.1
    * @apiDescription Envia a solicitação para pagamento via cartão de crédito a operadora de cartão.
    * @apiGroup Recursos Autenticados
@@ -95,5 +97,5 @@ module.exports = app => {
    * }
    *  
   */
-  app.post('/ws-operators/v1/pay/:operadora', indexController.pay)
+  app.post(`${baseURL}pay/:operadora`, operatorsController.pay)
 }

@@ -4,7 +4,7 @@ module.exports = {
   },
   
   pay: async (req, res) => {
-    const regras = require('../resources/constants.json')
+    const regras = require('../resources/constants.js').operadores
     const { operadora } = req.params
     const dadosOperadora = regras[operadora]
 
