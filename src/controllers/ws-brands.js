@@ -1,3 +1,5 @@
+const BankService = require('../services/ws-banks')
+
 module.exports = {
   status: (req, res) => {
     return res.status(200).json({ status: 'Serviço disponível WS2' })
@@ -43,6 +45,19 @@ module.exports = {
       })
     }
 
-    return res.status(200).json({ message: 'opa irmao, dando certo ai!' })
+    try {
+      const response = (await BankService.pay({
+        numero_cartao,
+        nome_cliente,
+        bandeira,
+        cod_seguranca,
+        valor_em_centavos,
+        parcelas
+      }))
+
+      return res.status(200).json(response.data)
+    } catch (error) {
+      return res.status(400).json(error.response.data)
+    }
   }
 }
