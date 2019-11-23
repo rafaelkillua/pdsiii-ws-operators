@@ -24,7 +24,7 @@
     "version": "0.0.1",
     "title": "WS Operator",
     "description": "A API do operador intermediará a comunicação entre o vendedor e a bandeira do cartão de crédito.",
-    "url": "https://pdsiii-operators.herokuapp.com/"
+    "url": "https://pdsiii-operators.herokuapp.com"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
