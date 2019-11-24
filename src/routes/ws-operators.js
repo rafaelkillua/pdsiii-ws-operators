@@ -26,7 +26,7 @@ module.exports = app => {
    * @apiDescription Envia a solicitação para pagamento via cartão de crédito a operadora de cartão.
    * @apiGroup Recursos Autenticados
    * 
-   * @apiParam {String} operator Parâmetro da url que corresponde a operadora de cartão desejado. Deve ser uma das opções a seguir: op-01, op-02 ou op-03.
+   * @apiParam {String} operadora Parâmetro da url que corresponde a operadora de cartão desejado. Deve ser uma das opções a seguir: op-01, op-02 ou op-03.
    * @apiParam {String} numero_cartao Número do cartão de crédito.
    * @apiParam {String} nome_cliente Nome do titular do cartão de crédito.
    * @apiParam {String} bandeira Nome da bandeira segundo opções a seguir: mister (cod.: 1111), vista (cod.: 2222) ou daciolo (cod.: 3333).
