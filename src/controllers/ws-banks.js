@@ -17,11 +17,12 @@ module.exports = {
                             nome_cliente = ? and
                             cod_seguranca = ? and
                             bandeira = ?`, [numero_cartao, nome_cliente, cod_seguranca, bandeira])
-      if (!cartao[0]) throw new Error('erro - cartão inexistente')
+      if (!cartao[0]) throw new Error('Erro')
       cartao = cartao[0]
     } catch (error) {
       return res.status(400).json({
         resposta: error.message,
+        detalhes: 'Cartão inexistente',
         nome_cliente,
         valor_em_centavos,
         parcelas
@@ -100,7 +101,8 @@ module.exports = {
         })
       } else {
         return res.status(400).json({
-          resposta: 'erro - cartão sem limite',
+          resposta: 'erro',
+          detalhes: 'Cartão sem limite',
           nome_cliente,
           valor_em_centavos,
           parcelas
