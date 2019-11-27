@@ -8,6 +8,7 @@ module.exports = {
   
   pay: async (req, res) => {
     const { numero_cartao, nome_cliente, bandeira, cod_seguranca, valor_em_centavos, parcelas } = req.body
+    console.log(req.body)
 
     // Pegar o cartão
     let cartao
