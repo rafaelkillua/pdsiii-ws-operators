@@ -5,7 +5,8 @@
   "scripts": {
     "start": "apidoc -i src/routes/ && node ./src/app.js",
     "dev": "nodemon ./src/app.js",
-    "doc": "apidoc -i src/routes/"
+    "doc": "apidoc -i src/routes/",
+    "test": "jest --detectOpenHandles"
   },
   "dependencies": {
     "apidoc": "^0.22.1",
@@ -19,6 +20,11 @@
     "morgan": "~1.10.0",
     "mysql": "^2.18.1"
   },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  },
   "apidoc": {
     "name": "WS-Operators",
     "version": "0.0.1",
@@ -26,9 +32,10 @@
     "description": "A API do operador intermediará a comunicação entre o vendedor e a bandeira do cartão de crédito.",
     "url": "https://pdsiii-operators.herokuapp.com"
   },
-  "devDependencies": {
-    "jest": "^26.0.1",
-    "nodemon": "^2.0.4",
-    "supertest": "^4.0.2"
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
