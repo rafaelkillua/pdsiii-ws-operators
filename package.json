@@ -6,7 +6,7 @@
     "start": "apidoc -i src/routes/ && node ./src/app.js",
     "dev": "nodemon ./src/app.js",
     "doc": "apidoc -i src/routes/",
-    "test": "jest --detectOpenHandles"
+    "test": "jest"
   },
   "dependencies": {
     "apidoc": "^0.22.1",
