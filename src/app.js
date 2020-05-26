@@ -24,9 +24,11 @@ banksRouter(app)
 app.use('/docs', express.static('doc'))
 
 try {
-  app.listen(port, () => {
-    console.log(`Online on port ${port}`)
-  })
+  if (process.env.NODE_ENV !== 'test') {
+    app.listen(port, () => {
+      console.log(`Online on port ${port}`)
+    })
+  }
 } catch (error) {
   console.error(error)
 }

@@ -1,4 +1,4 @@
-const query = require('../database/mysql')
+const { query } = require('../database/mysql')
 const { format, getDate, setDate, getMonth, setMonth, addMonths } = require('date-fns')
 
 module.exports = {
