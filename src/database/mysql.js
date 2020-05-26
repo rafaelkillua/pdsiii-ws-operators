@@ -12,4 +12,5 @@ const query = util.promisify(connection.query).bind(connection)
 
 connection.connect(err => err ? console.error(err) : console.log('MySQL connected'))
 
-module.exports = query
+exports.query = query
+exports.connection = connection
