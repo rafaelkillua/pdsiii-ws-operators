@@ -8,16 +8,16 @@
     "doc": "apidoc -i src/routes/"
   },
   "dependencies": {
-    "apidoc": "^0.18.0",
-    "axios": "^0.19.0",
-    "cookie-parser": "~1.4.4",
+    "apidoc": "^0.22.1",
+    "axios": "^0.19.2",
+    "cookie-parser": "~1.4.5",
     "cors": "^2.8.5",
-    "date-fns": "^2.8.0",
-    "debug": "~2.6.9",
+    "date-fns": "^2.14.0",
+    "debug": "~4.1.1",
     "dotenv": "^8.2.0",
-    "express": "~4.16.1",
-    "morgan": "~1.9.1",
-    "mysql": "^2.17.1"
+    "express": "~4.17.1",
+    "morgan": "~1.10.0",
+    "mysql": "^2.18.1"
   },
   "apidoc": {
     "name": "WS-Operators",
@@ -27,6 +27,8 @@
     "url": "https://pdsiii-operators.herokuapp.com"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
   }
 }
